@@ -25,7 +25,12 @@ app.on('ready', function() {
 	var menuSobre = new MenuItem({ click: function() {
 		sobreWindow = new BrowserWindow({
 		  width: 400,
-		  height: 400
+		  height: 400,
+	    resizable: false,
+	    maximizable: false,
+	    acceptFirstMouse: true,
+	    titleBarStyle: 'hidden',
+			icon: __dirname +"/icon/256x256.png"
 		});
 		sobreWindow.loadURL('file://' + __dirname + '/app/sobre.html');
 		sobreWindow.setMenu(null);
@@ -44,7 +49,8 @@ app.on('ready', function() {
     resizable: false,
     maximizable: false,
     acceptFirstMouse: true,
-    titleBarStyle: 'hidden'
+    titleBarStyle: 'hidden',
+		icon: __dirname +"/icon/256x256.png"
   });
   // and load the index.html of the app.
   mainWindow.loadURL('file://' + __dirname + '/app/index.html');

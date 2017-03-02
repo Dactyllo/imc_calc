@@ -1,0 +1,12 @@
+{
+    "productName": "Calculadora de IMC",
+    "appId": "com.electron.pesoideal",
+		"compression": "maximum",
+		"asar": false,
+    "linux": {
+      "target": ["AppImage"],
+      "category": "Utility",
+			"executableName": "Calculadora de IMC",
+			"icon": "/home/dactyllo/Nodeground/imc_calc/icon/"
+    }
+}

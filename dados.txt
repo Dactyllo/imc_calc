@@ -1,0 +1,92 @@
+#Tabela Padrão Adultos
+< 16,00 = Baixo peso Grau III
+16,00 a 16,99 = Baixo peso Grau II
+17,00 a 18,49 = Baixo peso Grau I
+18,50 a 24,99 = Peso Ideal
+25,00 a 29,99 = Sobrepeso
+30,00 a 34,99 = Obesidade Grau I
+35,00 a 39,99 = Obesidade Grau II
+>= 40,00 = Obesidade Grau III
+
+#Tabela Padrão Masculina
+< 20,7 = Abaixo do Peso
+20,7 a 26,4 = Peso Ideal
+26,5 a 27,8 = Pouco acima do peso
+27,9 a 31,1 = Acima do peso
+>= 31,2 = Obesidade
+
+#Tabela Padrão Feminina
+< 19,1 = Abaixo do Peso
+19,1 a 25,8 = Peso Ideal
+25,9 a 27,3 = Pouco acima do peso
+27,4 a 32,3 = Acima do peso
+>= 31,4 = Obesidade
+
+#Tabela Padrão Idosos
+<= 22 = Abaixo do Peso
+> 22 e < 27 = Peso Ideal
+>= 27 = Acima do peso
+
+#Tabela Idosos Masculinos
+< 22 = Abaixo do Peso
+22 a 27 = Peso Normal
+27,1 a 30 = Peso a mais
+30,1 a 35 = Obesidade Grau I
+35,1 a 39,9 = Obesidade Grau II
+>= 40 = Obesidade Grau III
+
+#Tabela Idosos Femininos
+< 22 = Abaixo do Peso
+22 a 27 = Peso Normal
+27,1 a 32 = Peso a mais
+32,1 a 37 = Obesidade Grau I
+37,1 a 41,9 = Obesidade Grau II
+>= 42 = Obesidade Grau III
+
+#Tabela Padrão Crianças/Jovens
+Baixo peso = < 18,5
+Normoponderal	= 18,5 a 24,9
+Excesso de peso =	25 a 29,9
+Obesidade =	> 30
+
+#Tabela Crianças Masculina
+2 anos - <= 15 | 15,01 a 18,1 | 18,11 a 19,2 | >= 19,21
+3 anos - <= 14,7 | 14,71 a 17,4 | 17,41 a 18,3 | >= 18,31
+4 anos - <= 14,4 | 14,41 a 16,9 | 16,91 a 17,8 | >= 17,81
+5 anos - <= 14,1 | 14,11 a 16,8 | 16,81 a 17,9 | >= 17,91
+6 anos - <= 14 | 14,01 a 17 | 17,01 a 18,4 | >= 18,41
+7 anos - <= 14 | 14,01 a 17,4 | 17,41 a 19 | >= 19,01
+8 anos - <= 14,2 | 14,21 a 17,8 | 17,81 a 20 | >= 20,01
+9 anos - <= 14,3 | 14,31 a 18,6 | 18,61 a 20,9 | >= 20,91
+10 anos - <= 14,6 | 14,61 a 19,4 | 19,41 a 22 | >= 22,01
+11 anos - <= 15 | 15,01 a 20,2 | 20,21 a 23,2 | >= 23,21
+12 anos - <= 15,5 | 15,51 a 21 | 21,01 a 24,1 | >= 24,11
+13 anos - <= 16 | 16,01 a 21,8 | 21,81 a 25,1 | >= 25,11
+14 anos - <= 16,5 | 16,51 a 22,7 | 22,71 a 25,9 | >= 25,91
+15 anos - <= 17,2 | 17,21 a 23,5 | 23,51 a 26,8 | >= 26,81
+16 anos - <= 17,8 | 17,81 a 24,2 | 24,21 a 27,5 | >= 27,51
+17 anos - <= 18,3 | 18,31 a 24,9 | 24,91 a 28,2 | >= 28,21
+18 anos - <= 18,8 | 18,81 a 25,6 | 25,61 a 28,8 | >= 28,81
+19 anos - <= 19,4 | 19,41 a 26,4 | 26,41 a 29,7 | >= 29,71
+20 anos - <= 19,8 | 19,81 a 27 | 27,01 a 30,5 | >= 30,51
+
+#Tabela Crianças Feminina
+2 anos - <= 14,8 | 14,81 a 18,1 | 18,11 a 19,1 | >= 19,11
+3 anos - <= 14,5 | 14,51 a 17,2 | 17,21 a 18,4 | >= 18,41
+4 anos - <= 14,1 | 14,11 a 16,8 | 16,81 a 18 | >= 18,01
+5 anos - <= 13,8 | 13,81 a 16,8 | 16,81 a 18,3 | >= 18,31
+6 anos - <= 13,7 | 13,71 a 17,1 | 17,11 a 18,8 | >= 18,81
+7 anos - <= 13,8 | 13,81 a 17,6 | 17,61 a 19,6 | >= 19,61
+8 anos - <= 14 | 14,01 a 18,3 | 18,31 a 20,6 | >= 20,61
+9 anos - <= 14,2 | 14,21 a 19,2 | 19,21 a 21,7 | >= 21,71
+10 anos - <= 14,6 | 14,61 a 20 | 20,01 a 22,9 | >= 22,91
+11 anos - <= 15 | 15,01 a 20,8 | 20,81 a 24 | >= 24,01
+12 anos - <= 15,5 | 15,51 a 21,7 | 21,71 a 25,1 | >= 25,11
+13 anos - <= 15,8 | 15,81 a 22,5 | 22,51 a 26,3 | >= 26,31
+14 anos - <= 16,4 | 16,41 a 23,4 | 23,41 a 27,2 | >= 27,21
+15 anos - <= 16,9 | 16,91 a 24 | 24,01 a 28 | >= 28,01
+16 anos - <= 17,4 | 17,41 a 24,6 | 24,61 a 28,8 | >= 28,81
+17 anos - <= 17,9 | 17,91 a 25,2 | 25,21 a 29,5 | >= 29,51
+18 anos - <= 18,3 | 18,31 a 25,6 | 25,61 a 30,3 | >= 30,31
+19 anos - <= 18,5 | 18,51 a 26,2 | 26,21 a 30,9 | >= 30,91
+20 anos - <= 18,6 | 18,61 a	26,5 | 26,51 a 31,7 | >= 31,71

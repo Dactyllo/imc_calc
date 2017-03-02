@@ -1,0 +1,2 @@
+Estruturar a janela Sobre
+Criar o pacote para Linux/Windows/Mac

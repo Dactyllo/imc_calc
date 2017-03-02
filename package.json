@@ -1,0 +1,14 @@
+{
+  "name": "pesoideal",
+  "productName": "Calculadora IMC",
+  "version": "0.9.0",
+  "description": "Uma calculadora do IMC e Peso Ideal",
+  "main": "app.js",
+  "author": "João Gaião",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "dexie": "^1.5.1"
+  }
+}

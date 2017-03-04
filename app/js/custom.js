@@ -30,8 +30,9 @@ $(function() {
 		var remote = require('electron').remote;
 		var win = remote.getCurrentWindow();
     // now i have everything from BrowserWindow api...
-    //win.setSize(600, 320);
-		win.setSize(600, 350);
+		//medida windows
+    win.setSize(600, 400);
+		//win.setSize(600, 350);
 	});
 
 	$("#peso, #altura").on('keyup', function() {

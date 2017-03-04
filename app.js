@@ -17,50 +17,51 @@ var sobreWindow = null;
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 app.on('ready', function() {
-
-
 	var menuTopo = new Menu();
 	var menuSair = new MenuItem({ role: "quit", label: "Sair" });
 	var menuDebug = new MenuItem({ role: "toggledevtools", label: "Debug" });
 	var menuSobre = new MenuItem({ click: function() {
 		sobreWindow = new BrowserWindow({
-		  width: 400,
-		  height: 400,
+		  width: 500,
+		  //height: 580,
+			//medida windows
+		  height: 630,
 	    resizable: false,
 	    maximizable: false,
+			modal: true,
+			parent: mainWindow,
 	    acceptFirstMouse: true,
-	    titleBarStyle: 'hidden',
-			icon: __dirname +"/icon/256x256.png"
+	    //titleBarStyle: 'hidden',
+			icon: __dirname+"/icon/256x256.png"
 		});
 		sobreWindow.loadURL('file://' + __dirname + '/app/sobre.html');
 		sobreWindow.setMenu(null);
 		sobreWindow.on('closed', function() {
 			sobreWindow = null;
 		});
-	}, label: "Sobre" });
+	}, label: "Informações" });
 
 	menuTopo.append(menuSair);
 	menuTopo.append(menuSobre);
-	menuTopo.append(menuDebug);
+	//menuTopo.append(menuDebug);
   // Create the browser window.
   mainWindow = new BrowserWindow({
     width: 600,
-    height: 280,
+    //height: 280,
+		//medida windows
+    height: 330,
     resizable: false,
     maximizable: false,
     acceptFirstMouse: true,
-    titleBarStyle: 'hidden',
-		icon: __dirname +"/icon/256x256.png"
+    //titleBarStyle: 'hidden',
+		icon: __dirname+"/icon/256x256.png"
   });
   // and load the index.html of the app.
   mainWindow.loadURL('file://' + __dirname + '/app/index.html');
-
   mainWindow.setMenu(menuTopo);
-
   // Open the DevTools.
   //mainWindow.openDevTools();
 
-  // Emitted when the window is closed.
   mainWindow.on('closed', function() {
     // Dereference the window object, usually you would store windows
     // in an array if your app supports multi windows, this is the time

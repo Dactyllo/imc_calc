@@ -1,12 +1,17 @@
 {
   "productName": "Calculadora IMC",
 	"name": "pesoideal",
-  "version": "0.9.0",
+  "version": "1.0.0",
   "description": "Uma calculadora do IMC e Peso Ideal",
   "main": "app.js",
   "author": "João Gaião",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+		"win32": "build --win --ia32 --config=electronBuilder.json",
+		"win64": "build --win --x64 --config=electronBuilder.json",
+		"linux32": "build --linux --ia32 --config=electronBuilder.json",
+		"linux64": "build --linux --x64 --config=electronBuilder.json",
+		"mac": "build --mac tar.gz --config=electronBuilder.json"
   },
   "dependencies": {
     "dexie": "^1.5.1"

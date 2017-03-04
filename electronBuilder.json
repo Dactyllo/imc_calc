@@ -2,11 +2,20 @@
     "productName": "Calculadora de IMC",
     "appId": "com.electron.pesoideal",
 		"compression": "maximum",
-		"asar": false,
+		"asar": true,
+		"mac": {
+      "target": ["dmg"],
+      "category": "public.app-category.utilities",
+			"icon": "/home/dactyllo/Nodeground/imc_calc/icon/"
+    },
     "linux": {
       "target": ["AppImage"],
       "category": "Utility",
 			"executableName": "Calculadora de IMC",
 			"icon": "/home/dactyllo/Nodeground/imc_calc/icon/"
+    },
+		"win": {
+      "target": ["portable"],
+			"icon": "/home/dactyllo/Nodeground/imc_calc/icon/icon.ico"
     }
 }

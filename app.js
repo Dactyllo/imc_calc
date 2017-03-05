@@ -21,24 +21,27 @@ app.on('ready', function() {
 	var menuSair = new MenuItem({ role: "quit", label: "Sair" });
 	var menuDebug = new MenuItem({ role: "toggledevtools", label: "Debug" });
 	var menuSobre = new MenuItem({ click: function() {
-		sobreWindow = new BrowserWindow({
-		  width: 500,
-		  //height: 580,
-			//medida windows
-		  height: 630,
-	    resizable: false,
-	    maximizable: false,
-			modal: true,
-			parent: mainWindow,
-	    acceptFirstMouse: true,
-	    //titleBarStyle: 'hidden',
-			icon: __dirname+"/icon/256x256.png"
-		});
-		sobreWindow.loadURL('file://' + __dirname + '/app/sobre.html');
-		sobreWindow.setMenu(null);
-		sobreWindow.on('closed', function() {
-			sobreWindow = null;
-		});
+		if(sobreWindow == null) {
+			sobreWindow = new BrowserWindow({
+			  width: 500,
+			  height: 580,
+				//medida windows
+			  //height: 630,
+		    resizable: false,
+		    maximizable: false,
+				modal: true,
+				parent: mainWindow,
+		    acceptFirstMouse: true,
+				autoHideMenuBar: true,
+		    //titleBarStyle: 'hidden',
+				icon: __dirname+"/icon/256x256.png"
+			});
+			sobreWindow.loadURL('file://' + __dirname + '/app/sobre.html');
+			sobreWindow.setMenu(null);
+			sobreWindow.on('closed', function() {
+				sobreWindow = null;
+			});
+		}
 	}, label: "Informações" });
 
 	menuTopo.append(menuSair);
@@ -47,9 +50,9 @@ app.on('ready', function() {
   // Create the browser window.
   mainWindow = new BrowserWindow({
     width: 600,
-    //height: 280,
+    height: 280,
 		//medida windows
-    height: 330,
+    //height: 330,
     resizable: false,
     maximizable: false,
     acceptFirstMouse: true,
@@ -58,9 +61,10 @@ app.on('ready', function() {
   });
   // and load the index.html of the app.
   mainWindow.loadURL('file://' + __dirname + '/app/index.html');
-  mainWindow.setMenu(menuTopo);
+  //mainWindow.setMenu(menuTopo);
   // Open the DevTools.
   //mainWindow.openDevTools();
+	Menu.setApplicationMenu(menuTopo);
 
   mainWindow.on('closed', function() {
     // Dereference the window object, usually you would store windows

@@ -31,8 +31,8 @@ $(function() {
 		var win = remote.getCurrentWindow();
     // now i have everything from BrowserWindow api...
 		//medida windows
-    win.setSize(600, 400);
-		//win.setSize(600, 350);
+    //win.setSize(600, 400);
+		win.setSize(600, 350);
 	});
 
 	$("#peso, #altura").on('keyup', function() {

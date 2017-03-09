@@ -5,16 +5,17 @@
 		"asar": true,
 		"mac": {
       "target": ["dmg"],
-      "category": "public.app-category.utilities"
+      "category": "public.app-category.utilities",
+      "icon": "/home/jgaiao/NodeGround/imc_calc/build/icon.icns"
     },
     "linux": {
       "target": ["AppImage"],
       "category": "Utility",
 			"executableName": "Calculadora de IMC",
-			"icon": "/home/dactyllo/Nodeground/imc_calc/build/"
+			"icon": "/home/jgaiao/NodeGround/imc_calc/build/"
     },
 		"win": {
       "target": ["portable"],
-			"icon": "/home/dactyllo/Nodeground/imc_calc/build/icon.ico"
+			"icon": "/home/jgaiao/NodeGround/imc_calc/build/icon.ico"
     }
 }

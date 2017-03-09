@@ -1,5 +1,13 @@
 var {app, BrowserWindow, Menu, MenuItem} = require('electron');
 
+/*const electron = require('electron')
+// Module to control application life.
+const app = electron.app
+const Menu = electron.Menu;
+const MenuItem = electron.MenuItem;
+// Module to create native browser window.
+const BrowserWindow = electron.BrowserWindow*/
+
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 var mainWindow = null;
@@ -17,7 +25,34 @@ var sobreWindow = null;
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 app.on('ready', function() {
-	var menuTopo = new Menu();
+	var template = [
+	 {label: 'Quit', click: function() {app.quit();}},
+	 {label: 'Informações', click: function() {
+	 	if(sobreWindow == null) {
+			sobreWindow = new BrowserWindow({
+			  width: 500,
+			  height: 580,
+				//medida windows
+			  //height: 630,
+		    resizable: false,
+		    maximizable: false,
+				modal: true,
+				parent: mainWindow,
+		    acceptFirstMouse: true,
+				autoHideMenuBar: true,
+				icon: __dirname+"/icon.png"
+			});
+			sobreWindow.loadURL('file://' + __dirname + '/app/sobre.html');
+			sobreWindow.setMenu(null);
+			sobreWindow.on('closed', function() {
+				sobreWindow = null;
+			});
+		}
+	 }}
+	];
+	Menu.setApplicationMenu(Menu.buildFromTemplate(template));
+	
+	/*var menuTopo = new Menu();
 	var menuSair = new MenuItem({ role: "quit", label: "Sair" });
 	var menuDebug = new MenuItem({ role: "toggledevtools", label: "Debug" });
 	var menuSobre = new MenuItem({ click: function() {
@@ -33,8 +68,7 @@ app.on('ready', function() {
 				parent: mainWindow,
 		    acceptFirstMouse: true,
 				autoHideMenuBar: true,
-		    //titleBarStyle: 'hidden',
-				icon: __dirname+"/icon/256x256.png"
+				icon: __dirname+"/icon.png"
 			});
 			sobreWindow.loadURL('file://' + __dirname + '/app/sobre.html');
 			sobreWindow.setMenu(null);
@@ -45,7 +79,7 @@ app.on('ready', function() {
 	}, label: "Informações" });
 
 	menuTopo.append(menuSair);
-	menuTopo.append(menuSobre);
+	menuTopo.append(menuSobre);*/
 	//menuTopo.append(menuDebug);
   // Create the browser window.
   mainWindow = new BrowserWindow({
@@ -56,15 +90,15 @@ app.on('ready', function() {
     resizable: false,
     maximizable: false,
     acceptFirstMouse: true,
-    //titleBarStyle: 'hidden',
-		icon: __dirname+"/icon/256x256.png"
+		icon: __dirname+"/icon.png"
   });
+
   // and load the index.html of the app.
   mainWindow.loadURL('file://' + __dirname + '/app/index.html');
   //mainWindow.setMenu(menuTopo);
   // Open the DevTools.
   //mainWindow.openDevTools();
-	Menu.setApplicationMenu(menuTopo);
+	//Menu.setApplicationMenu(menuTopo);
 
   mainWindow.on('closed', function() {
     // Dereference the window object, usually you would store windows
@@ -72,8 +106,9 @@ app.on('ready', function() {
     // when you should delete the corresponding element.
 		if(sobreWindow) sobreWindow.hide();
     mainWindow = null;
-		if (process.platform != 'darwin') {
+		app.quit();
+		/*if (process.platform != 'darwin') {
 	    app.quit();
-	  }
+	  }*/
   });
 });
